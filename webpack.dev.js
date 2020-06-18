@@ -10,12 +10,17 @@ const devConfig = {
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            cacheDirectory: true,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true,
+            },
           },
-        },
+          {
+            loader: 'eslint-loader',
+          },
+        ],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,

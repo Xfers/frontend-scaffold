@@ -15,17 +15,17 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:react/recommended",
     "prettier"
   ],
-  "plugins": ["@typescript-eslint", "jest", "prettier"],
+  "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
     "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/typedef": [
-      "error",
+      "warn",
       {
         "arrayDestructuring": false,
         "arrowParameter": false,
@@ -60,21 +60,14 @@
     "@typescript-eslint/consistent-type-definitions": ["error", "type"],
     "react/destructuring-assignment": "off",
     "camelcase": "off",
-    "no-console": "error",
-    "@typescript-eslint/no-unused-vars-experimental": "error",
+    "no-console": "warn",
+    "@typescript-eslint/no-unused-vars-experimental": "warn",
     "@typescript-eslint/no-unused-vars": "off",
     "no-unused-vars": "off",
     "react/jsx-key": "error",
     "react/no-array-index-key": "off",
     "react/self-closing-comp": "off",
     "@typescript-eslint/no-explicit-any": "error",
-    "@typescript-eslint/camelcase": [
-      "error",
-      {
-        "properties": "never"
-      }
-    ],
-    "import/no-relative-parent-imports": "error",
     "default-case": "off",
     "max-lines": [
       "error",
@@ -86,12 +79,6 @@
     ],
     "import/extensions": "off",
     "@typescript-eslint/no-empty-function": "off",
-    "import/no-unused-modules": [
-      "error",
-      {
-        "unusedExports": true
-      }
-    ],
     "import/no-extraneous-dependencies": "off",
     "react/prop-types": "off",
     "@typescript-eslint/no-inferrable-types": "off",
@@ -104,10 +91,11 @@
     "@typescript-eslint/no-use-before-define": "off",
     "react/jsx-pascal-case": "off",
     "jsx-a11y/anchor-is-valid": "off",
-    "react/jsx-closing-tag-location": "off"
+    "react/jsx-closing-tag-location": "off",
+    "react/display-name": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off"
   },
   "env": {
-    "browser": true,
-    "jest/globals": true
+    "browser": true
   }
 }
