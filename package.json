@@ -1,0 +1,14 @@
+{
+  "name": "@xfers/frontend-scaffold",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "",
+    "build:prod": "",
+    "lint/ci": "",
+    "tsc/ci": "",
+    "format": ""
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "private": true
+}
