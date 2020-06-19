@@ -25,8 +25,12 @@ export default function () {
           </Select>
         </Filter>
         <Filter>
-          <FilterTitle>Date</FilterTitle>
+          <FilterTitle>Single Date</FilterTitle>
           <DatePicker style={{ width: '100%' }} />
+        </Filter>
+        <Filter>
+          <FilterTitle>Date Range</FilterTitle>
+          <DatePicker.RangePicker style={{ width: '100%' }} />
         </Filter>
         <Filter>
           <FilterTitle>Tags</FilterTitle>
