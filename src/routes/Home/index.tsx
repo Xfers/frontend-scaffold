@@ -1,80 +1,33 @@
-import React from 'react'
-import styled from '@emotion/styled'
+import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import UserDashboardLayout from '~/components/UserDashboardLayout'
+import DesktopView from './DesktopView'
+import DetailsModal from './DetailsModal'
 
-import { setUserName } from '~/store/user/actions'
+import { getMonsters } from '~/store/home/actions'
 
-export default function () {
-  const dispatch = useDispatch()
-
-  return (
-    <UserDashboardLayout>
-      <Container>
-        <Header>
-          <HeaderTitle>Home</HeaderTitle>
-          <HeaderButtonGroup>
-            <HeaderBlueButton onClick={() => dispatch(setUserName('Jason'))}>
-              Set Username: Jason
-            </HeaderBlueButton>
-            <HeaderGreenButton onClick={() => dispatch(setUserName('Emily'))}>
-              Set Username: Emily
-            </HeaderGreenButton>
-          </HeaderButtonGroup>
-        </Header>
-      </Container>
-    </UserDashboardLayout>
-  )
+export type ModalState = null | {
+  monsterUrl: string
 }
 
-const Container = styled.div``
+export default function () {
+  const [open, setOpen] = useState(false)
+  const [modalState, setModalState] = useState<ModalState>(null)
 
-const Header = styled.div`
-  height: 84px;
-  display: flex;
-  justify-content: space-between;
-`
+  const dispatch = useDispatch()
 
-const HeaderTitle = styled.div`
-  font-family: Inter;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 29px;
-  color: #121212;
-`
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch(getMonsters())
+    }, 1000)
+  }, [dispatch])
 
-const HeaderButtonGroup = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`
-
-const HeaderBlueButton = styled.div`
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
-  text-align: center;
-  color: #ffffff;
-  background: #2f8dee;
-  padding: 11px 15px;
-  border-radius: 5px;
-  margin-right: 10px;
-  cursor: pointer;
-`
-
-const HeaderGreenButton = styled.div`
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
-  text-align: center;
-  color: #ffffff;
-  background: #189c08;
-  padding: 11px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-`
+  return (
+    <>
+      <UserDashboardLayout>
+        <DesktopView setOpen={setOpen} setModalState={setModalState} />
+      </UserDashboardLayout>
+      <DetailsModal open={open} modalState={modalState} onClose={() => setOpen(false)} />
+    </>
+  )
+}
