@@ -15,7 +15,7 @@ export default function ({ setOpen, setModalState }: Props) {
     <Container>
       <Card>
         <ControlBar>
-          <CardTitle>Transaction History</CardTitle>
+          <CardTitle>Monsters</CardTitle>
           <ControlGroup>
             <Input.Search
               placeholder="Search by Monster"
