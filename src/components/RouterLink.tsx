@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { Link as ReactRouterLink } from 'react-router-dom'
 
 const RouterLink = styled(ReactRouterLink)`
-  font-family: Inter;
+  font-family: Helvetica;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
