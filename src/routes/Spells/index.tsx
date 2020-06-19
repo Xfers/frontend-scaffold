@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import Layout from '~/components/Layout'
-import DesktopView from './DesktopView'
+import Spells from './Spells'
 import SampleModal from './SampleModal'
 
 import { getSpells } from '~/store/spells/actions'
@@ -25,7 +25,7 @@ export default function () {
   return (
     <>
       <Layout>
-        <DesktopView setOpen={setOpen} setModalState={setModalState} />
+        <Spells setOpen={setOpen} setModalState={setModalState} />
       </Layout>
       <SampleModal open={open} modalState={modalState} onClose={() => setOpen(false)} />
     </>

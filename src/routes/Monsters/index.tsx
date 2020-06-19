@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import Layout from '~/components/Layout'
-import DesktopView from './DesktopView'
+import Monsters from './Monsters'
 import SampleModal from './SampleModal'
 
 import { getMonsters } from '~/store/monsters/actions'
@@ -25,7 +25,7 @@ export default function () {
   return (
     <>
       <Layout>
-        <DesktopView setOpen={setOpen} setModalState={setModalState} />
+        <Monsters setOpen={setOpen} setModalState={setModalState} />
       </Layout>
       <SampleModal open={open} modalState={modalState} onClose={() => setOpen(false)} />
     </>
