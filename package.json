@@ -23,6 +23,7 @@
     "@typescript-eslint/eslint-plugin": "^3.3.0",
     "@typescript-eslint/parser": "^3.3.0",
     "antd": "^4.3.4",
+    "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
     "babel-plugin-emotion": "^10.0.33",
     "case-sensitive-paths-webpack-plugin": "^2.3.0",
