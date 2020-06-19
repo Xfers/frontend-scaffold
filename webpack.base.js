@@ -10,7 +10,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
-      '~/shared': path.resolve(__dirname, 'src/common'),
+      '~/common': path.resolve(__dirname, 'src/common'),
       '~/components': path.resolve(__dirname, 'src/components'),
       '~/routes': path.resolve(__dirname, 'src/routes'),
       '~/store': path.resolve(__dirname, 'src/store'),
@@ -28,7 +28,7 @@ module.exports = {
     new ErrorOverlayPlugin(),
   ],
   devServer: {
-    host: '0.0.0.0',
+    host: 'localhost',
     disableHostCheck: true,
     historyApiFallback: true, // NOTE for react router
     https: false,

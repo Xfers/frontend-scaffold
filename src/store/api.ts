@@ -3,8 +3,8 @@ import axios from 'axios'
 const DOMAIN = 'https://www.dnd5eapi.co/api'
 
 export enum ENDPOINTS {
-  SPELL_ACID_ARROW_ENDPOINT = '/spells/acid-arrow',
-  MONSTER_ADULT_BLACK_DRAGON_ENDPOINT = '/monsters/adult-black-dragon/',
+  MONSTERS_ENDPOINT = '/monsters',
+  SPELLS_ENDPOINT = '/spells',
 }
 
 async function makeRequest(
