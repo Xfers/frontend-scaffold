@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { useDispatch } from 'react-redux'
-import Layout from '~/components/Layout'
+import UserDashboardLayout from '~/components/UserDashboardLayout'
 
 import { setUserName } from '~/store/user/actions'
 
@@ -9,7 +9,7 @@ export default function () {
   const dispatch = useDispatch()
 
   return (
-    <Layout>
+    <UserDashboardLayout>
       <Container>
         <Header>
           <HeaderTitle>Home</HeaderTitle>
@@ -23,7 +23,7 @@ export default function () {
           </HeaderButtonGroup>
         </Header>
       </Container>
-    </Layout>
+    </UserDashboardLayout>
   )
 }
 

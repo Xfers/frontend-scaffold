@@ -1,10 +1,10 @@
 import React from 'react'
-import Layout from '~/components/Layout'
+import UserDashboardLayout from '~/components/UserDashboardLayout'
 
 export default function () {
   return (
-    <Layout>
+    <UserDashboardLayout>
       <h1>Dashboard</h1>
-    </Layout>
+    </UserDashboardLayout>
   )
 }
