@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import UserDashboardLayout from '~/components/UserDashboardLayout'
+import Layout from '~/components/Layout'
 import DesktopView from './DesktopView'
 import SampleModal from './SampleModal'
 
@@ -24,9 +24,9 @@ export default function () {
 
   return (
     <>
-      <UserDashboardLayout>
+      <Layout>
         <DesktopView setOpen={setOpen} setModalState={setModalState} />
-      </UserDashboardLayout>
+      </Layout>
       <SampleModal open={open} modalState={modalState} onClose={() => setOpen(false)} />
     </>
   )

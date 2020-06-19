@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Card from '~/components/Card'
-import { DESKTOP_VIEW } from '~/common/breakPoints'
 import MonstersTable from './MonstersTable'
 import { ModalState } from './index'
 
@@ -36,11 +35,7 @@ const Container = styled.div`
   padding-top: 24px;
   padding-left: 24px;
   padding-right: 24px;
-  display: none;
-
-  ${DESKTOP_VIEW} {
-    display: block;
-  }
+  display: block;
 `
 
 const Title = styled.div`
