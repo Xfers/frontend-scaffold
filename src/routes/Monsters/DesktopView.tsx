@@ -22,7 +22,7 @@ export default function ({ setOpen, setModalState }: Props) {
           marginBottom: '24px',
         }}
       >
-        <Title>Home</Title>
+        <Title>Monsters</Title>
         <Divider />
         <MonstersTable setOpen={setOpen} setModalState={setModalState} />
       </Card>

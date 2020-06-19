@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import UserDashboardLayout from '~/components/UserDashboardLayout'
 import DesktopView from './DesktopView'
-import DetailsModal from './DetailsModal'
+import SampleModal from './SampleModal'
 
-import { getMonsters } from '~/store/home/actions'
+import { getMonsters } from '~/store/monsters/actions'
 
 export type ModalState = null | {
   monsterUrl: string
@@ -27,7 +27,7 @@ export default function () {
       <UserDashboardLayout>
         <DesktopView setOpen={setOpen} setModalState={setModalState} />
       </UserDashboardLayout>
-      <DetailsModal open={open} modalState={modalState} onClose={() => setOpen(false)} />
+      <SampleModal open={open} modalState={modalState} onClose={() => setOpen(false)} />
     </>
   )
 }

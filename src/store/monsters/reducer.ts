@@ -15,7 +15,7 @@ type State = {
   currentPage: number
 }
 
-export const home: Reducer<State, ActionTypes> = (state = initialState, action) => {
+export const monsters: Reducer<State, ActionTypes> = (state = initialState, action) => {
   switch (action.type) {
     case HOME_ACTIONS.SET_IS_LOADING: {
       return {

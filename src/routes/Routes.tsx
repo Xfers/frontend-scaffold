@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-const Home = React.lazy(() => import('./Home'))
+const Monsters = React.lazy(() => import('./Monsters'))
 const Dashboard = React.lazy(() => import('./Dashboard'))
 
 export enum PATHS {
@@ -13,7 +13,7 @@ export default function () {
   return (
     <Suspense fallback={<div>loading</div>}>
       <Switch>
-        <Route exact path={PATHS.HOME} component={Home} />
+        <Route exact path={PATHS.MONSTERS} component={Monsters} />
         <Route exact path={PATHS.DASHBOARD} component={Dashboard} />
       </Switch>
     </Suspense>

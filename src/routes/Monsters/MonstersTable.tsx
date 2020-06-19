@@ -1,10 +1,10 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import styled from '@emotion/styled'
-import { Table, Button, Pagination } from 'antd'
+import { Table, Button } from 'antd'
 import { RootState } from '~/store/types'
 import detailsIcon from '~/assets/details.svg'
-import { ModalState } from '~/routes/Home'
+import { ModalState } from '~/routes/Monsters'
 
 type Props = {
   setOpen: (open: boolean) => void
@@ -38,7 +38,6 @@ export default function ({ setOpen, setModalState }: Props) {
               justifyContent: 'center',
             }}
             onClick={() => {
-              console.log('HELLO!!')
               setOpen(true)
               setModalState({
                 monsterUrl: url,
@@ -52,15 +51,13 @@ export default function ({ setOpen, setModalState }: Props) {
     },
   ]
 
-  const isLoading = useSelector((state: RootState) => state.home.isLoading)
-  const monsters = useSelector((state: RootState) => state.home.monsters)
+  const isLoading = useSelector((state: RootState) => state.monsters.isLoading)
+  const monsters = useSelector((state: RootState) => state.monsters.monsters)
 
   return (
-    <>
-      <Container>
-        <Table rowKey="name" columns={columns} dataSource={monsters} loading={isLoading} />
-      </Container>
-    </>
+    <Container>
+      <Table rowKey="name" columns={columns} dataSource={monsters} loading={isLoading} />
+    </Container>
   )
 }
 

@@ -33,9 +33,9 @@ class NavigationMenu extends React.Component<Props, State> {
     return (
       <Container>
         <Menu mode="inline" openKeys={this.state.openKeys} onOpenChange={this.onOpenChange}>
-          <Menu.Item key="1" className={path === PATHS.HOME ? activeLinkClass : ''}>
+          <Menu.Item key="1" className={path === PATHS.MONSTERS ? activeLinkClass : ''}>
             <Link to={'/'}>
-              <SubMenuTitle>Home</SubMenuTitle>
+              <SubMenuTitle>Monsters</SubMenuTitle>
             </Link>
           </Menu.Item>
           <Menu.Item key="2" className={path === PATHS.DASHBOARD ? activeLinkClass : ''}>
