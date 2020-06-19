@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import Navigation from './Navigation'
+import DesktopNavigation from './DesktopNavigation'
+import MobileNavigation from './MobileNavigation'
 import { DESKTOP_VIEW } from '~/common/breakPoints'
 import { PATHS } from '~/routes/Routes'
 
@@ -13,12 +14,15 @@ type Props = {
 export default function ({ children }: Props) {
   return (
     <Container>
-      <NavigationWrapper>
-        <Navigation />
-      </NavigationWrapper>
+      <DesktopNavigationWrapper>
+        <DesktopNavigation />
+      </DesktopNavigationWrapper>
+
       <MainContainer>
+        <MobileNavigationWrapper>
+          <MobileNavigation />
+        </MobileNavigationWrapper>
         {children}
-        <Footer>Xfers ©2020 Created by Xfers Frontend Team</Footer>
       </MainContainer>
     </Container>
   )
@@ -39,7 +43,7 @@ const MainContainer = styled.div`
   background: #ffffff;
 `
 
-const NavigationWrapper = styled.div`
+const DesktopNavigationWrapper = styled.div`
   border-right: 1px solid #e8e8e8;
   display: none;
 
@@ -48,24 +52,11 @@ const NavigationWrapper = styled.div`
   }
 `
 
-const Footer = styled.div`
-  min-width: 100%;
-  flex-grow: 1;
-  color: #777777;
-  font-size: 12px;
-  line-height: 17px;
-  background-color: white;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+const MobileNavigationWrapper = styled.div`
+  border-right: 1px solid #e8e8e8;
+  display: block;
 
   ${DESKTOP_VIEW} {
-    background-color: #f6f7f9;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 24px;
+    display: none;
   }
 `
