@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Modal, Button } from 'antd'
+import { Modal } from 'antd'
 import RouterLink from '~/components/RouterLink'
 import { PATHS } from '~/routes/Routes'
 

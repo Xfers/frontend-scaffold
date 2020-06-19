@@ -28,7 +28,7 @@ module.exports = {
     new ErrorOverlayPlugin(),
   ],
   devServer: {
-    host: '0.0.0.0',
+    host: 'localhost',
     disableHostCheck: true,
     historyApiFallback: true, // NOTE for react router
     https: false,
