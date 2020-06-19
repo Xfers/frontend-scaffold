@@ -13,16 +13,14 @@ type Props = {
 }
 
 export default function ({ open, onClose, modalState }: Props) {
-  console.log('modalState', modalState)
-  console.log('open', open)
   if (modalState === null) return null
 
-  const { monsterUrl } = modalState
+  const { spellUrl } = modalState
 
   return (
     <Modal visible={open} title="Sample Modal" onOk={() => onClose()} onCancel={() => onClose()}>
       <BodyText>
-        <BodyNote>You selected this row: {monsterUrl}</BodyNote>
+        <BodyNote>You selected this row: {spellUrl}</BodyNote>
         <BodyNote>
           Click <RouterLink to={PATHS.MONSTERS}>here</RouterLink> to go to Monsters page.
         </BodyNote>

@@ -4,10 +4,10 @@ import UserDashboardLayout from '~/components/UserDashboardLayout'
 import DesktopView from './DesktopView'
 import SampleModal from './SampleModal'
 
-import { getMonsters } from '~/store/monsters/actions'
+import { getSpells } from '~/store/spells/actions'
 
 export type ModalState = null | {
-  monsterUrl: string
+  spellUrl: string
 }
 
 export default function () {
@@ -18,7 +18,7 @@ export default function () {
 
   useEffect(() => {
     setTimeout(() => {
-      dispatch(getMonsters())
+      dispatch(getSpells())
     }, 1000)
   }, [dispatch])
 

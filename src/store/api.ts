@@ -4,6 +4,7 @@ const DOMAIN = 'https://www.dnd5eapi.co/api'
 
 export enum ENDPOINTS {
   MONSTERS_ENDPOINT = '/monsters',
+  SPELLS_ENDPOINT = '/spells',
 }
 
 async function makeRequest(

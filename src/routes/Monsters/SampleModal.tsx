@@ -13,8 +13,6 @@ type Props = {
 }
 
 export default function ({ open, onClose, modalState }: Props) {
-  console.log('modalState', modalState)
-  console.log('open', open)
   if (modalState === null) return null
 
   const { monsterUrl } = modalState

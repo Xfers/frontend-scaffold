@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import Card from '~/components/Card'
 import { DESKTOP_VIEW } from '~/common/breakPoints'
-import MonstersTable from './MonstersTable'
+import SpellsTable from './SpellsTable'
 import { ModalState } from './index'
 
 type Props = {
@@ -24,7 +24,7 @@ export default function ({ setOpen, setModalState }: Props) {
       >
         <Title>Spells</Title>
         <Divider />
-        <MonstersTable setOpen={setOpen} setModalState={setModalState} />
+        <SpellsTable setOpen={setOpen} setModalState={setModalState} />
       </Card>
     </Container>
   )

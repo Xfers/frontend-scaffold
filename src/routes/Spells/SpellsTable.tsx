@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import { Table, Button } from 'antd'
 import { RootState } from '~/store/types'
 import detailsIcon from '~/assets/details.svg'
-import { ModalState } from '~/routes/Monsters'
+import { ModalState } from '~/routes/Spells'
 
 type Props = {
   setOpen: (open: boolean) => void
@@ -40,7 +40,7 @@ export default function ({ setOpen, setModalState }: Props) {
             onClick={() => {
               setOpen(true)
               setModalState({
-                monsterUrl: url,
+                spellUrl: url,
               })
             }}
           >
@@ -51,12 +51,12 @@ export default function ({ setOpen, setModalState }: Props) {
     },
   ]
 
-  const isLoading = useSelector((state: RootState) => state.monsters.isLoading)
-  const monsters = useSelector((state: RootState) => state.monsters.monsters)
+  const isLoading = useSelector((state: RootState) => state.spells.isLoading)
+  const spells = useSelector((state: RootState) => state.spells.spells)
 
   return (
     <Container>
-      <Table rowKey="name" columns={columns} dataSource={monsters} loading={isLoading} />
+      <Table rowKey="name" columns={columns} dataSource={spells} loading={isLoading} />
     </Container>
   )
 }
