@@ -24,7 +24,7 @@ export default function ({ open, onClose, modalState }: Props) {
       <BodyText>
         <BodyNote>You selected this row: {monsterUrl}</BodyNote>
         <BodyNote>
-          Click <RouterLink to={PATHS.SPELLS}>here</RouterLink> to go to Spells page.
+          Click <RouterLink to={PATHS.MONSTERS}>here</RouterLink> to go to Monsters page.
         </BodyNote>
       </BodyText>
     </Modal>

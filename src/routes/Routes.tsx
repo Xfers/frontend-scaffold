@@ -3,11 +3,11 @@ import { Switch, Route } from 'react-router-dom'
 import { Spin } from 'antd'
 
 const Monsters = React.lazy(() => import('./Monsters'))
-const Dashboard = React.lazy(() => import('./Dashboard'))
+const Spells = React.lazy(() => import('./Spells'))
 
 export enum PATHS {
   MONSTERS = '/',
-  DASHBOARD = '/dashboard',
+  SPELLS = '/spells',
 }
 
 const loadingComponent = (
@@ -34,7 +34,7 @@ export default function () {
     <Suspense fallback={loadingComponent}>
       <Switch>
         <Route exact path={PATHS.MONSTERS} component={Monsters} />
-        <Route exact path={PATHS.DASHBOARD} component={Dashboard} />
+        <Route exact path={PATHS.SPELLS} component={Spells} />
       </Switch>
     </Suspense>
   )

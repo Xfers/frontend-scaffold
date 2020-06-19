@@ -38,9 +38,9 @@ class NavigationMenu extends React.Component<Props, State> {
               <SubMenuTitle>Monsters</SubMenuTitle>
             </Link>
           </Menu.Item>
-          <Menu.Item key="2" className={path === PATHS.DASHBOARD ? activeLinkClass : ''}>
-            <Link to={PATHS.DASHBOARD}>
-              <SubMenuTitle>Dashboard</SubMenuTitle>
+          <Menu.Item key="2" className={path === PATHS.SPELLS ? activeLinkClass : ''}>
+            <Link to={PATHS.SPELLS}>
+              <SubMenuTitle>Spells</SubMenuTitle>
             </Link>
           </Menu.Item>
         </Menu>
